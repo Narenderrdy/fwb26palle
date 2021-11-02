@@ -3,9 +3,8 @@ extends layout
 block content
   h1= title
   p I am crazy  #{title}
-  button(type="button", class="btn btn-success") press me for the contents
-
-div(id = "target") text of display
+  button(type="button", class="btn btn-success",onclick="update()") press me for the contents
+  div(id = "target") text of display
   script.  
    var client_count=0;
      function update() {
