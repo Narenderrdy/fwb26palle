@@ -10,20 +10,25 @@ block content
                     {
                         "brand": "Tommy",
                         "material": "cotton",
-                        "cost": 15$
+                        "cost": 15
                     },
                     {
                         "brand": "Kangol",
                         "material": "Wool",
-                        "cost": 20$
+                        "cost": 20
                     },
                     {
                         "brand": "Bailey",
                         "material": "Nylon",
-                        "cost": 10$
+                        "cost": 10
                     },                   
                 ]
             each v,index in Hat
                 div(class="col-sm-2" onclick=`buy(${index})`) #{v.brand}
                 div(class="col-sm-2" onclick=`buy(${index})`) #{v.material}
                 div(class="col-sm-2" onclick=`buy(${index})`) #{v.cost}
+        script.                
+            function buy(itemNo)
+            {
+                  alert(`you purchased Item ${itemNo+1}`)
+            }
